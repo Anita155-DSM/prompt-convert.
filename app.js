@@ -4,3 +4,11 @@ let opcion
 function convertirPesosADolares (pesos){
     return pesos/dolar
 }
+do {
+    opcion = prompt('Menú: 1.Divisa (de pesos a dolares) 2.Salir');
+    if (opcion==='1'){
+        let divisa =  prompt('¿Cuántos pesos vas a convertir?');
+        let pesos = parseFloat(divisa);
+    }
+}while (opcion !== '2');
+

@@ -12,8 +12,16 @@ do {
       if (!isNaN (pesos)) {
       let resultado = convertirPesosADolares(pesos);
       alert(`Resultado: ${resultado.toFixed(2)} USD`);
-    }
-  }
-} while (opcion !== "2");
+      
+      let operacion = {
+                tipo: "divisa",
+        entrada: `${pesos} ARS`,
+        salida: `${resultado.toFixed(2)} USD`,
+        fecha: new Date().toLocaleString()
+      };
 
+      historial.push (operacion);
+    } 
+  }
+}while (opcion !== "2");
 

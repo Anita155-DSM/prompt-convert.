@@ -7,8 +7,13 @@ function convertirPesosADolares (pesos){
 do {
     opcion = prompt('Menú: 1.Divisa (de pesos a dolares) 2.Salir');
     if (opcion==='1'){
-        let divisa =  prompt('¿Cuántos pesos vas a convertir?');
-        let pesos = parseFloat(divisa);
+      let divisa =  prompt('¿Cuántos pesos vas a convertir?');
+      let pesos = parseFloat(divisa);
+      if (!isNaN (pesos)) {
+      let resultado = convertirPesosADolares(pesos);
+      alert(`Resultado: ${resultado.toFixed(2)} USD`);
     }
-}while (opcion !== '2');
+  }
+} while (opcion !== "2");
+
 
